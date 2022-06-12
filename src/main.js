@@ -24,4 +24,5 @@ new Vue({
   render: (h) => h(App),
 }).$mount("#app");
 
-initializeApp(config);
+const firebaseApp = initializeApp(config);
+export default firebaseApp;

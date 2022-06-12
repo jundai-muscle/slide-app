@@ -6,6 +6,8 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
+    name: "createUsers",
+    component: () => import("../components/Users"),
   },
   {
     path: "/about",
