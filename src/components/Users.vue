@@ -5,7 +5,7 @@
         <v-text-field label="Email" v-model="email"> </v-text-field>
         <v-text-field label="Password" v-model="pw" type="password">
         </v-text-field>
-        <v-btn color="primary" @click="createUser()"></v-btn>
+        <v-btn color="primary" @click="createUser()">SignUp</v-btn>
       </v-col>
     </v-row>
   </v-container>

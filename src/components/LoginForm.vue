@@ -6,9 +6,10 @@
         <v-form ref="form">
           <v-row justify="center" align-content="center">
             <v-col cols="10">
+              <v-text-field label="Email" v-model="email"> </v-text-field>
               <v-text-field label="パスワード" v-model="pw"> </v-text-field>
               <v-spacer></v-spacer>
-              <v-btn depressed color="primary" @click="login()"></v-btn>
+              <v-btn color="primary" @click="login()">login</v-btn>
             </v-col>
           </v-row>
         </v-form>
@@ -19,7 +20,7 @@
 
 <script>
 import firebaseApp from "../main";
-import { getAuth, signWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const auth = getAuth(firebaseApp);
 
@@ -31,7 +32,7 @@ export default {
   }),
   methods: {
     login: function () {
-      signWithEmailAndPassword(auth, this.email, this.pw)
+      signInWithEmailAndPassword(auth, this.email, this.pw)
         .then((userCredential) => {
           const user = userCredential.user;
           console.log("create user success." + user);

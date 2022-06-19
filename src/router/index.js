@@ -6,8 +6,13 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "createUsers",
-    component: () => import("../components/Users"),
+    name: "loginForm",
+    component: () => import("../components/LoginForm"),
+  },
+  {
+    path: "/top",
+    name: "topForm",
+    component: () => import("../components/Top"),
   },
   {
     path: "/about",

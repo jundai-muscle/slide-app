@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <Login></Login>
     <v-main>
       <router-view />
     </v-main>
@@ -8,14 +7,12 @@
 </template>
 
 <script>
-import Login from "./components/Users.vue";
+// import Login from "./components/Users.vue";
 export default {
   name: "App",
-  components: {
-    Login,
+  components: {},
+  created() {
+    this.$router.push(`/`);
   },
-  data: () => ({
-    //
-  }),
 };
 </script>
