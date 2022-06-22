@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main class="main">
       <router-view />
     </v-main>
   </v-app>
@@ -16,3 +16,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.main {
+  overflow: auto;
+}
+</style>

@@ -15,6 +15,11 @@ const routes = [
     component: () => import("../components/Top"),
   },
   {
+    path: "/create",
+    name: "createUsers",
+    component: () => import("../components/Users"),
+  },
+  {
     path: "/about",
     name: "about",
     // route level code-splitting
